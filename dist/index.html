@@ -1,0 +1,2425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maruti Suzuki QA Lab - Enterprise Portal</title>
+  <!-- Google Fonts - Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Stylesheet -->
+  <script type="module" crossorigin src="/assets/index-Cmi8NlMu.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-D-2YqoZ0.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       AUTHENTICATION / LOGIN PAGE (SPLIT-SCREEN QA LAB THEME - UNTOUCHED)
+       ========================================================================== -->
+  <div id="login-page" class="login-wrapper">
+    
+    <!-- LEFT PANEL: Scientific Visuals & Brand Info -->
+    <div class="login-left">
+      <!-- Background Sci-Fi / Lab Vector Graphics -->
+      <div class="scifi-bg-elements">
+        <!-- Benzene Ring Hexagon -->
+        <svg class="sci-svg benzene-ring" viewBox="0 0 100 100">
+          <polygon points="50,5 90,27 90,72 50,95 10,72 10,27" fill="none" stroke="#00f0ff" stroke-width="1.5" stroke-dasharray="4,4"/>
+          <polygon points="50,15 80,32 80,67 50,85 20,67 20,32" fill="none" stroke="#8b5cf6" stroke-width="1"/>
+          <circle cx="50" cy="5" r="4" fill="#00f0ff"/>
+          <circle cx="90" cy="27" r="4" fill="#ec4899"/>
+          <circle cx="90" cy="72" r="4" fill="#10b981"/>
+          <circle cx="50" cy="95" r="4" fill="#f59e0b"/>
+          <circle cx="10" cy="72" r="4" fill="#3b82f6"/>
+          <circle cx="10" cy="27" r="4" fill="#a855f7"/>
+        </svg>
+
+        <!-- Test Tube Vector -->
+        <svg class="sci-svg test-tube" viewBox="0 0 50 100">
+          <path d="M 15 10 L 15 75 A 10 10 0 0 0 35 75 L 35 10 Z" fill="none" stroke="#00f0ff" stroke-width="2"/>
+          <path d="M 17 45 L 33 45 A 8 8 0 0 1 17 45" fill="rgba(0, 240, 255, 0.3)"/>
+          <line x1="10" y1="10" x2="40" y2="10" stroke="#00f0ff" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+
+        <!-- DNA Helix -->
+        <svg class="sci-svg dna-helix" viewBox="0 0 100 300">
+          <path d="M 20 10 Q 80 50 20 90 T 20 170 T 20 250" fill="none" stroke="#ec4899" stroke-width="2"/>
+          <path d="M 80 10 Q 20 50 80 90 T 80 170 T 80 250" fill="none" stroke="#00f0ff" stroke-width="2"/>
+          <line x1="30" y1="30" x2="70" y2="30" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+          <line x1="45" y1="50" x2="55" y2="50" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+          <line x1="30" y1="70" x2="70" y2="70" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+          <line x1="25" y1="110" x2="75" y2="110" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+          <line x1="35" y1="130" x2="65" y2="130" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+          <line x1="25" y1="150" x2="75" y2="150" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+        </svg>
+
+        <!-- Atom Model -->
+        <svg class="sci-svg atom-model" viewBox="0 0 100 100">
+          <ellipse cx="50" cy="50" rx="40" ry="15" fill="none" stroke="#8b5cf6" stroke-width="1.5" transform="rotate(30 50 50)"/>
+          <ellipse cx="50" cy="50" rx="40" ry="15" fill="none" stroke="#00f0ff" stroke-width="1.5" transform="rotate(90 50 50)"/>
+          <ellipse cx="50" cy="50" rx="40" ry="15" fill="none" stroke="#ec4899" stroke-width="1.5" transform="rotate(150 50 50)"/>
+          <circle cx="50" cy="50" r="6" fill="#00f0ff"/>
+        </svg>
+
+        <!-- Erlenmeyer Flask -->
+        <svg class="sci-svg lab-flask" viewBox="0 0 100 100">
+          <path d="M 42 15 L 42 35 L 15 80 A 8 8 0 0 0 22 90 L 78 90 A 8 8 0 0 0 85 80 L 58 35 L 58 15 Z" fill="none" stroke="#3b82f6" stroke-width="2"/>
+          <path d="M 25 70 Q 50 65 75 70 L 78 80 A 8 8 0 0 1 70 88 L 30 88 A 8 8 0 0 1 22 80 Z" fill="rgba(59, 130, 246, 0.25)"/>
+        </svg>
+      </div>
+
+      <!-- Left Main Copy -->
+      <div class="left-hero-content">
+        <div class="qa-badge">
+          <span class="badge-line"></span>
+          QUALITY ASSURANCE DIVISION
+          <span class="badge-line"></span>
+        </div>
+        
+        <h1 class="portal-title">
+          QA Lab <br>
+          <span class="gradient-text">Inventory System</span>
+        </h1>
+        
+        <p class="portal-subtext">
+          Precision chemical tracking and inventory management for enterprise-grade laboratories
+        </p>
+
+        <!-- Dynamic Floating Element Cards Block -->
+        <div class="element-grid">
+          <div class="elem-card elem-fe" style="--delay: 0s;">
+            <span class="elem-num">26</span>
+            <span class="elem-symbol">Fe</span>
+          </div>
+          <div class="elem-card elem-cu" style="--delay: 0.5s;">
+            <span class="elem-num">29</span>
+            <span class="elem-symbol">Cu</span>
+          </div>
+          <div class="elem-card elem-au" style="--delay: 1.0s;">
+            <span class="elem-num">79</span>
+            <span class="elem-symbol">Au</span>
+          </div>
+          <div class="elem-card elem-ag" style="--delay: 1.5s;">
+            <span class="elem-num">47</span>
+            <span class="elem-symbol">Ag</span>
+          </div>
+          <div class="elem-card elem-na" style="--delay: 2.0s;">
+            <span class="elem-num">11</span>
+            <span class="elem-symbol">Na</span>
+          </div>
+          <div class="elem-card elem-o" style="--delay: 2.5s;">
+            <span class="elem-num">8</span>
+            <span class="elem-symbol">O</span>
+          </div>
+          <div class="elem-card elem-h" style="--delay: 3.0s;">
+            <span class="elem-num">1</span>
+            <span class="elem-symbol">H</span>
+          </div>
+          
+          <div class="elem-card elem-combo">
+            <span class="elem-num">26</span>
+            <span class="elem-symbol">Fe</span>
+            <span class="elem-sub">C</span>
+          </div>
+          <div class="elem-card elem-cu-lg">
+            <span class="elem-num">29</span>
+            <span class="elem-symbol">Cu</span>
+          </div>
+          <div class="elem-card elem-au-lg">
+            <span class="elem-num">79</span>
+            <span class="elem-symbol">Au</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chemical Formulas Footer Ticker -->
+      <div class="chem-ticker">
+        <span class="chem-item"><i data-lucide="circle-dot"></i> CH₃COOH</span>
+        <span class="chem-item"><i data-lucide="circle-dot"></i> Fe₂O₃</span>
+        <span class="chem-item"><i data-lucide="circle-dot"></i> CaCO₃</span>
+        <span class="chem-item"><i data-lucide="circle-dot"></i> HNO₃</span>
+        <span class="chem-item"><i data-lucide="circle-dot"></i> NaCl</span>
+        <span class="chem-item"><i data-lucide="circle-dot"></i> C₂H₅OH</span>
+        <span class="chem-item"><i data-lucide="circle-dot"></i> H₂O₂</span>
+        <span class="chem-item"><i data-lucide="circle-dot"></i> NH₃</span>
+        <span class="chem-item"><i data-lucide="circle-dot"></i> CO₂</span>
+        <span class="chem-item"><i data-lucide="circle-dot"></i> C₆H₁₂O₆</span>
+      </div>
+    </div>
+
+    <!-- RIGHT PANEL: Login Form -->
+    <div class="login-right">
+      <div class="login-form-container">
+        
+        <!-- Company Logo Card (White Box) -->
+        <div class="brand-logo-card">
+          <img src="/assets/maruti-suzuki-logo-DLPulmux.png" alt="Maruti Suzuki Logo" class="login-brand-logo-img">
+        </div>
+
+        <!-- Titles -->
+        <h2 class="welcome-heading">Welcome Back</h2>
+        <p class="portal-subheading">ENTERPRISE QA PORTAL</p>
+
+        <!-- Form Card with Glowing Top Border -->
+        <form class="login-card-form" id="login-form">
+          <div class="form-gradient-border"></div>
+
+          <!-- Email Input -->
+          <div class="form-group">
+            <label for="login-email">EMAIL ADDRESS</label>
+            <input type="email" id="login-email" placeholder="e.g. admin@qa.com" value="admin@qa.com" required>
+          </div>
+
+          <!-- Password Input -->
+          <div class="form-group">
+            <label for="login-password">PASSWORD</label>
+            <input type="password" id="login-password" placeholder="••••••••" value="maruti2026" required>
+          </div>
+
+          <!-- Options -->
+          <div class="form-options">
+            <label class="remember-me">
+              <input type="checkbox" checked>
+              <span>Remember Me</span>
+            </label>
+            <a href="#" class="forgot-pass" onclick="alert('Password reset link dispatched to enterprise administrator.')">Forgot Password?</a>
+          </div>
+
+          <!-- Sign In Button -->
+          <button type="submit" class="login-submit-btn">
+            <i data-lucide="flask-conical"></i>
+            <span>Sign In to Lab Portal</span>
+          </button>
+        </form>
+
+        <!-- Footer -->
+        <div class="login-footer">
+          <span><i data-lucide="shield-check"></i> Powered by Enterprise QA Division <i data-lucide="sparkles"></i></span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       AUTHENTICATION LOADING TRANSITION SCREEN
+       ========================================================================== -->
+  <div id="loader-screen" class="loader-overlay hidden">
+    <div class="loader-content">
+      <div class="loader-spinner">
+        <svg class="loader-svg" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="8"/>
+          <circle cx="50" cy="50" r="40" fill="none" stroke="url(#loaderGrad)" stroke-width="8" stroke-dasharray="200" stroke-dashoffset="50" stroke-linecap="round"/>
+          <defs>
+            <linearGradient id="loaderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FF5E00"/>
+              <stop offset="100%" stop-color="#10B981"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <i data-lucide="shield-check" class="loader-center-icon"></i>
+      </div>
+      <h3 class="loader-title" id="loader-status-text">Authenticating Credentials...</h3>
+      <p class="loader-desc">Syncing Maruti Suzuki Manesar QA Hub Data</p>
+      
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="loader-progress-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MAIN ENTERPRISE DASHBOARD (Hidden until authenticated)
+       ========================================================================== -->
+  <div id="dashboard-page" class="dashboard-page-wrapper hidden">
+    
+    <!-- Top Navigation Header -->
+    <header class="header">
+      <div class="header-left">
+        <!-- MS Logo Box -->
+        <div class="ms-logo-box" style="background-color: #002F6C; width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; border-radius: 6px; overflow: hidden; padding: 4px;">
+          <img src="/assets/maruti-suzuki-logo-clean-BF5jPPfE.png" alt="Maruti Suzuki Logo" class="header-logo-img" style="height: 100%; width: 100%; object-fit: contain; filter: brightness(0) invert(1);">
+        </div>
+        <div class="header-brand-text">
+          <div class="header-brand-title">MARUTI SUZUKI <span class="qa-labs-badge">QA LABS</span></div>
+          <div class="header-brand-sub">INVENTORY MANAGEMENT SYSTEM</div>
+        </div>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="search-container">
+        <i data-lucide="search" class="search-icon"></i>
+        <input type="text" id="dashboard-search" placeholder="Search chemicals, standards, batches, and suppliers...">
+      </div>
+
+      <div class="header-right">
+        <!-- Live Date & Time Pill -->
+        <div class="datetime-pill">
+          <i data-lucide="calendar" style="width:14px;height:14px;flex-shrink:0;"></i>
+          <span id="live-date">Jul 21, 2026</span>,&nbsp;
+          <span id="live-time">12:30:00 PM</span>
+        </div>
+
+        <!-- Hamburger Menu -->
+        <button class="hdr-icon-btn" id="sidebar-toggle-btn" title="Toggle Sidebar">
+          <i data-lucide="menu"></i>
+        </button>
+
+        <!-- Notifications Bell -->
+        <div class="hdr-bell-wrap" style="position:relative;">
+          <button class="hdr-icon-btn hdr-bell-btn" id="notification-btn" title="Notifications">
+            <i data-lucide="bell"></i>
+            <span class="hdr-badge" id="notification-unread-count">4</span>
+          </button>
+          <div class="dropdown-menu" id="notifications-dropdown">
+            <div class="dropdown-header">
+              <h3>System Alerts &amp; Logs</h3>
+              <span class="mark-read" id="btn-mark-all-read">Mark all read</span>
+            </div>
+            <div class="dropdown-content" id="notification-list-container">
+              <div class="dropdown-item alert-expired">
+                <i data-lucide="alert-triangle"></i>
+                <div class="item-details">
+                  <p class="item-msg">Batch CRM-098 Expiry Warning (15 Days)</p>
+                  <span class="item-time">10m ago</span>
+                </div>
+              </div>
+              <div class="dropdown-item alert-low">
+                <i data-lucide="battery-charging"></i>
+                <div class="item-details">
+                  <p class="item-msg">Lithium-Ion Cell Pack low stock (42 units)</p>
+                  <span class="item-time">45m ago</span>
+                </div>
+              </div>
+              <div class="dropdown-item alert-pending">
+                <i data-lucide="git-pull-request"></i>
+                <div class="item-details">
+                  <p class="item-msg">Stock replenishment request pending approval</p>
+                  <span class="item-time">2h ago</span>
+                </div>
+              </div>
+              <div class="dropdown-item alert-info">
+                <i data-lucide="check-circle"></i>
+                <div class="item-details">
+                  <p class="item-msg">Annual Safety Inspection Audit Completed</p>
+                  <span class="item-time">1d ago</span>
+                </div>
+              </div>
+            </div>
+            <div class="dropdown-footer">
+              <a href="#admin-view" class="nav-view-link" data-view="admin-view">View All System Audit Logs</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- User Profile Chip (Aditya Sharma • QA Lab) -->
+        <div class="user-chip" id="user-profile-btn">
+          <div class="user-chip-avatar">
+            <img src="https://i.pravatar.cc/40?img=12" alt="Aditya Sharma">
+          </div>
+          <div class="user-chip-info">
+            <span class="user-chip-name" id="user-display-name">Aditya Sharma</span>
+            <span class="user-chip-role" id="user-display-dept">&bull; QA Lab</span>
+          </div>
+          <div class="dropdown-menu profile-dropdown" id="profile-dropdown">
+            <div class="dropdown-user-header">
+              <strong>Aditya Sharma</strong>
+              <small>Department: Quality Assurance</small>
+            </div>
+            <div class="dropdown-divider"></div>
+            <a href="#admin-view" class="dropdown-link nav-view-link" data-view="admin-view"><i data-lucide="user"></i> User Management</a>
+            <a href="#settings-view" class="dropdown-link nav-view-link" data-view="settings-view"><i data-lucide="settings"></i> System Configurations</a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-link logout-link" id="profile-logout-link"><i data-lucide="log-out"></i> Logout</a>
+          </div>
+        </div>
+
+        <!-- Sign Out Button (red) -->
+        <button class="signout-btn" id="header-logout-btn" title="Sign Out">
+          <i data-lucide="log-out"></i>
+          <span>Sign Out</span>
+        </button>
+      </div><!-- /.header-right -->
+    </header>
+
+    <!-- App Main Body with Sidebar + Workspace Views -->
+    <div class="app-body">
+      
+      <!-- Left Sidebar Navigation (Reference Photo Match) -->
+      <aside class="sidebar" id="sidebar">
+
+        <!-- OVERVIEW SECTION -->
+        <div class="sidebar-section-label">OVERVIEW</div>
+        <nav class="sidebar-nav">
+          <ul>
+            <li class="nav-item active" data-view="dashboard-view">
+              <a href="#dashboard">
+                <i data-lucide="layout-dashboard"></i>
+                <span class="nav-label">Dashboard</span>
+                <span class="nav-active-dot"></span>
+              </a>
+            </li>
+            <li class="nav-item" data-view="analytics-view">
+              <a href="#analytics">
+                <i data-lucide="bar-chart-2"></i>
+                <span class="nav-label">Analytics Suite</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- INVENTORY MODULES SECTION -->
+        <div class="sidebar-section-label">INVENTORY MODULES</div>
+        <nav class="sidebar-nav">
+          <ul>
+            <li class="nav-item" data-view="chemicals-view" data-category="Chemicals">
+              <a href="#chemicals">
+                <i data-lucide="flask-conical"></i>
+                <span class="nav-label">Chemicals</span>
+              </a>
+            </li>
+            <li class="nav-item" data-view="crms-view" data-category="CRMs">
+              <a href="#crms">
+                <i data-lucide="book-open"></i>
+                <span class="nav-label">CRMs Standards</span>
+              </a>
+            </li>
+            <li class="nav-item" data-view="consumables-view" data-category="Equipment Consumables">
+              <a href="#consumables">
+                <i data-lucide="settings-2"></i>
+                <span class="nav-label">Equip. Consumables</span>
+              </a>
+            </li>
+            <li class="nav-item" data-view="spares-view" data-category="Equipment Spares">
+              <a href="#spares">
+                <i data-lucide="cpu"></i>
+                <span class="nav-label">Equip. Spares</span>
+              </a>
+            </li>
+            <li class="nav-item" data-view="gases-view" data-category="Gases">
+              <a href="#gases">
+                <i data-lucide="wind"></i>
+                <span class="nav-label">Gases Cylinders</span>
+              </a>
+            </li>
+            <li class="nav-item" data-view="tools-view" data-category="Tools">
+              <a href="#tools">
+                <i data-lucide="wrench"></i>
+                <span class="nav-label">Tools &amp; Instruments</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- TOOLS & REPORTS SECTION -->
+        <div class="sidebar-section-label">TOOLS &amp; REPORTS</div>
+        <nav class="sidebar-nav">
+          <ul>
+            <li class="nav-item" data-view="qr-suite-view">
+              <a href="#qr-suite">
+                <i data-lucide="qr-code"></i>
+                <span class="nav-label">QR Code Scan/Print</span>
+              </a>
+            </li>
+            <li class="nav-item" data-view="reports-view">
+              <a href="#reports">
+                <i data-lucide="file-text"></i>
+                <span class="nav-label">Reports Engine</span>
+              </a>
+            </li>
+            <li class="nav-item" data-view="vendors-view">
+              <a href="#vendors">
+                <i data-lucide="truck"></i>
+                <span class="nav-label">Vendor Registry</span>
+              </a>
+            </li>
+            <li class="nav-item" data-view="expiry-view">
+              <a href="#expiry">
+                <i data-lucide="calendar-off"></i>
+                <span class="nav-label">Expiry &amp; Compliance</span>
+                <span class="nav-badge badge-danger" id="sidebar-expiry-badge">7</span>
+              </a>
+            </li>
+            <li class="nav-item" data-view="admin-view">
+              <a href="#admin">
+                <i data-lucide="shield-check"></i>
+                <span class="nav-label">Admin &amp; Audit Logs</span>
+              </a>
+            </li>
+            <li class="nav-item" data-view="settings-view">
+              <a href="#settings">
+                <i data-lucide="sliders"></i>
+                <span class="nav-label">System Configurations</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Sidebar Footer -->
+        <div class="sidebar-footer">
+          <div class="sidebar-footer-brand">
+            <div class="sfb-logo" style="background-color: #002F6C; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 4px; overflow: hidden; padding: 2px;">
+              <img src="/assets/maruti-suzuki-logo-clean-BF5jPPfE.png" alt="Maruti Suzuki Logo" class="sidebar-logo-img" style="height: 100%; width: 100%; object-fit: contain; filter: brightness(0) invert(1);">
+            </div>
+            <div class="sfb-text">
+              <span class="sfb-title">QA Inventory System</span>
+              <span class="sfb-sub">Maruti Suzuki India Ltd.</span>
+            </div>
+          </div>
+          <div class="system-status">
+            <div class="status-indicator online"></div>
+            <span class="status-text">System Online</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Workspace Views Area -->
+      <main class="main-content">
+        
+        <!-- ===================================================================
+             VIEW 1: DASHBOARD VIEW (Reference Photo Match)
+             =================================================================== -->
+        <div id="dashboard-view" class="workspace-view active">
+          
+          <!-- Welcome Header (Photo Match) -->
+          <section class="welcome-section">
+            <div class="welcome-text">
+              <h1 class="welcome-heading">Welcome back, <span class="welcome-name" id="hero-user-name">Aditya Sharma</span> 👋</h1>
+              <p class="welcome-sub">Department of Quality Assurance &bull; Maruti Suzuki India Ltd.</p>
+            </div>
+            <div class="welcome-actions">
+              <div class="systems-operational-badge">
+                <span class="status-dot-green"></span>
+                <span>Systems Operational</span>
+              </div>
+              <button class="btn-view-analytics nav-view-trigger" data-view="analytics-view">
+                <i data-lucide="bar-chart-2"></i>
+                View Analytics
+              </button>
+            </div>
+          </section>
+
+          <!-- 4 Stat Cards (Photo Match) -->
+          <section class="stats-section">
+            <div class="photo-stats-grid">
+
+              <!-- Card 1: Total Inventory (Blue/Indigo) -->
+              <div class="photo-stat-card card-indigo">
+                <div class="psc-top">
+                  <div class="psc-icon-wrap psc-icon-indigo">
+                    <i data-lucide="layers"></i>
+                  </div>
+                  <span class="psc-trend psc-trend-up">&#8593;5.2%</span>
+                </div>
+                <div class="psc-number" id="stat-total-inv">13</div>
+                <div class="psc-label">Total Inventory</div>
+                <div class="psc-sublabel">All categories combined</div>
+                <div class="psc-bar psc-bar-indigo"></div>
+              </div>
+
+              <!-- Card 2: Low Stock Alerts (Yellow/Orange) -->
+              <div class="photo-stat-card card-amber">
+                <div class="psc-top">
+                  <div class="psc-icon-wrap psc-icon-amber">
+                    <i data-lucide="alert-circle"></i>
+                  </div>
+                  <span class="psc-trend psc-trend-down">&#8595;2.1%</span>
+                </div>
+                <div class="psc-number psc-num-amber" id="stat-low-stock">5</div>
+                <div class="psc-label">Low Stock Alerts</div>
+                <div class="psc-sublabel">Items below reorder level</div>
+                <div class="psc-bar psc-bar-amber"></div>
+              </div>
+
+              <!-- Card 3: Out of Stock (Red) -->
+              <div class="photo-stat-card card-rose">
+                <div class="psc-top">
+                  <div class="psc-icon-wrap psc-icon-rose">
+                    <i data-lucide="package-x"></i>
+                  </div>
+                </div>
+                <div class="psc-number psc-num-rose" id="stat-out-stock">2</div>
+                <div class="psc-label">Out of Stock</div>
+                <div class="psc-sublabel">Immediate restocking required</div>
+                <div class="psc-bar psc-bar-rose"></div>
+              </div>
+
+              <!-- Card 4: Expired Standards (Pink/Magenta) -->
+              <div class="photo-stat-card card-pink">
+                <div class="psc-top">
+                  <div class="psc-icon-wrap psc-icon-pink">
+                    <i data-lucide="calendar-x"></i>
+                  </div>
+                </div>
+                <div class="psc-number psc-num-pink" id="stat-expired">1</div>
+                <div class="psc-label">Expired Standards</div>
+                <div class="psc-sublabel">Red validity date</div>
+                <div class="psc-bar psc-bar-pink"></div>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- 6 Category Mini-Cards + Stock Flow Chart (Photo Match) -->
+          <section class="category-cards-section">
+            <div class="cat-mini-row">
+
+              <!-- Row 1: 3 Category Cards -->
+              <div class="cat-mini-card" data-category="Chemicals" id="nav-chemicals">
+                <div class="cmc-icon cmc-icon-blue"><i data-lucide="flask-conical"></i></div>
+                <div class="cmc-body">
+                  <div class="cmc-number" id="mini-count-chemicals">3</div>
+                  <div class="cmc-label">CHEMICALS</div>
+                  <div class="cmc-bar cmc-bar-blue"></div>
+                </div>
+                <i data-lucide="chevron-right" class="cmc-arrow"></i>
+              </div>
+
+              <div class="cat-mini-card" data-category="CRMs" id="nav-crms">
+                <div class="cmc-icon cmc-icon-green"><i data-lucide="book-open"></i></div>
+                <div class="cmc-body">
+                  <div class="cmc-number" id="mini-count-crms">2</div>
+                  <div class="cmc-label">CRMS STANDARDS</div>
+                  <div class="cmc-bar cmc-bar-green"></div>
+                </div>
+                <i data-lucide="chevron-right" class="cmc-arrow"></i>
+              </div>
+
+              <div class="cat-mini-card" data-category="Equipment Consumables" id="nav-consumables">
+                <div class="cmc-icon cmc-icon-purple"><i data-lucide="settings-2"></i></div>
+                <div class="cmc-body">
+                  <div class="cmc-number" id="mini-count-consumables">2</div>
+                  <div class="cmc-label">EQUIP. CONSUMABLES</div>
+                  <div class="cmc-bar cmc-bar-purple"></div>
+                </div>
+                <i data-lucide="chevron-right" class="cmc-arrow"></i>
+              </div>
+
+              <!-- Stock Flow Chart -->
+              <div class="cat-mini-card cat-stock-flow-card">
+                <div class="stock-flow-header">
+                  <span class="stock-flow-title">Stock Flow</span>
+                  <span class="stock-flow-sub">Monthly In vs Out</span>
+                  <div class="stock-flow-legend">
+                    <span class="sfl-dot sfl-in"></span><span>In</span>
+                    <span class="sfl-dot sfl-out"></span><span>Out</span>
+                  </div>
+                </div>
+                <div class="stock-flow-chart-wrap">
+                  <canvas id="chart-stock-flow" height="90"></canvas>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Row 2: 3 Category Cards -->
+            <div class="cat-mini-row cat-mini-row-2">
+
+              <div class="cat-mini-card" data-category="Equipment Spares" id="nav-spares">
+                <div class="cmc-icon cmc-icon-orange"><i data-lucide="cpu"></i></div>
+                <div class="cmc-body">
+                  <div class="cmc-number" id="mini-count-spares">2</div>
+                  <div class="cmc-label">EQUIP. SPARES</div>
+                  <div class="cmc-bar cmc-bar-orange"></div>
+                </div>
+                <i data-lucide="chevron-right" class="cmc-arrow"></i>
+              </div>
+
+              <div class="cat-mini-card" data-category="Gases" id="nav-gases">
+                <div class="cmc-icon cmc-icon-teal"><i data-lucide="wind"></i></div>
+                <div class="cmc-body">
+                  <div class="cmc-number" id="mini-count-gases">2</div>
+                  <div class="cmc-label">GASES CYLINDERS</div>
+                  <div class="cmc-bar cmc-bar-teal"></div>
+                </div>
+                <i data-lucide="chevron-right" class="cmc-arrow"></i>
+              </div>
+
+              <div class="cat-mini-card" data-category="Tools" id="nav-tools">
+                <div class="cmc-icon cmc-icon-yellow"><i data-lucide="wrench"></i></div>
+                <div class="cmc-body">
+                  <div class="cmc-number" id="mini-count-tools">2</div>
+                  <div class="cmc-label">TOOLS &amp; INSTRUMENTS</div>
+                  <div class="cmc-bar cmc-bar-yellow"></div>
+                </div>
+                <i data-lucide="chevron-right" class="cmc-arrow"></i>
+              </div>
+
+            </div>
+          </section>
+
+
+
+
+          <!-- ===================================================================
+               INVENTORY CATEGORIES MODULE (EXPANDABLE ACCORDION GRID)
+               =================================================================== -->
+          <section class="categories-accordion-section">
+            <div class="section-header">
+              <div>
+                <h2>Enterprise Inventory Category Modules</h2>
+                <p>Expand any category module to manage stock operations, register items, view reports, or inspect catalog lists.</p>
+              </div>
+              <button class="btn btn-outline-sm" id="btn-collapse-all-categories"><i data-lucide="chevrons-up"></i> Collapse All</button>
+            </div>
+
+            <div class="category-accordion-grid">
+              
+              <!-- 1. Chemicals Category Module -->
+              <div class="cat-accordion-card" data-category="Chemicals">
+                <div class="cat-card-header">
+                  <div class="cat-header-info">
+                    <div class="cat-icon icon-chem"><i data-lucide="flask-conical"></i></div>
+                    <div>
+                      <h3 class="cat-title">Chemicals</h3>
+                      <span class="cat-subtitle">Solvents, paints, lubricants, analytical reagents</span>
+                    </div>
+                  </div>
+                  <div class="cat-header-meta">
+                    <span class="cat-qty-badge">812 L</span>
+                    <i data-lucide="chevron-down" class="cat-expand-icon"></i>
+                  </div>
+                </div>
+                <div class="cat-card-body">
+                  <p class="cat-desc">High-purity chemical standards, degreasers, acids, and raw laboratory solutions used in QA testing.</p>
+                  <div class="cat-mini-stats">
+                    <span class="mini-stat"><strong id="cat-stat-chem-active">14</strong> SKUs</span>
+                    <span class="mini-stat text-warning"><strong id="cat-stat-chem-low">2</strong> Low Stock</span>
+                    <span class="mini-stat text-danger"><strong id="cat-stat-chem-exp">1</strong> Expired</span>
+                  </div>
+                  <div class="cat-action-toolbar">
+                    <button class="btn btn-success-sm action-btn-add" data-category="Chemicals"><i data-lucide="plus"></i> Add Stock</button>
+                    <button class="btn btn-danger-sm action-btn-remove" data-category="Chemicals"><i data-lucide="minus"></i> Remove Stock</button>
+                    <button class="btn btn-info-sm action-btn-stock" data-category="Chemicals"><i data-lucide="bar-chart-2"></i> Stock Page</button>
+                    <button class="btn btn-warning-sm action-btn-register" data-category="Chemicals"><i data-lucide="file-plus"></i> Register Chemical</button>
+                    <button class="btn btn-secondary-sm action-btn-reports" data-category="Chemicals"><i data-lucide="file-text"></i> Reports</button>
+                    <button class="btn btn-primary-sm action-btn-list" data-category="Chemicals"><i data-lucide="list"></i> Inventory List</button>
+                    <button class="btn btn-outline-sm action-btn-collapse"><i data-lucide="chevron-up"></i> Collapse</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 2. CRMs Category Module -->
+              <div class="cat-accordion-card" data-category="CRMs">
+                <div class="cat-card-header">
+                  <div class="cat-header-info">
+                    <div class="cat-icon icon-crm"><i data-lucide="gauge"></i></div>
+                    <div>
+                      <h3 class="cat-title">CRMs</h3>
+                      <span class="cat-subtitle">Certified Reference Materials & Calibration Standards</span>
+                    </div>
+                  </div>
+                  <div class="cat-header-meta">
+                    <span class="cat-qty-badge">340 lots</span>
+                    <i data-lucide="chevron-down" class="cat-expand-icon"></i>
+                  </div>
+                </div>
+                <div class="cat-card-body">
+                  <p class="cat-desc">NIST-traceable calibration reference samples, spectrometer standards, and precision hardness blocks.</p>
+                  <div class="cat-mini-stats">
+                    <span class="mini-stat"><strong>8</strong> SKUs</span>
+                    <span class="mini-stat text-warning"><strong>1</strong> Low Stock</span>
+                    <span class="mini-stat text-danger"><strong>2</strong> Expired</span>
+                  </div>
+                  <div class="cat-action-toolbar">
+                    <button class="btn btn-success-sm action-btn-add" data-category="CRMs"><i data-lucide="plus"></i> Add Stock</button>
+                    <button class="btn btn-danger-sm action-btn-remove" data-category="CRMs"><i data-lucide="minus"></i> Remove Stock</button>
+                    <button class="btn btn-info-sm action-btn-stock" data-category="CRMs"><i data-lucide="bar-chart-2"></i> Stock Page</button>
+                    <button class="btn btn-warning-sm action-btn-register" data-category="CRMs"><i data-lucide="file-plus"></i> Register CRM</button>
+                    <button class="btn btn-secondary-sm action-btn-reports" data-category="CRMs"><i data-lucide="file-text"></i> Reports</button>
+                    <button class="btn btn-primary-sm action-btn-list" data-category="CRMs"><i data-lucide="list"></i> Inventory List</button>
+                    <button class="btn btn-outline-sm action-btn-collapse"><i data-lucide="chevron-up"></i> Collapse</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3. Equipment Consumables Category Module -->
+              <div class="cat-accordion-card" data-category="Equipment Consumables">
+                <div class="cat-card-header">
+                  <div class="cat-header-info">
+                    <div class="cat-icon icon-cons"><i data-lucide="hard-hat"></i></div>
+                    <div>
+                      <h3 class="cat-title">Equipment Consumables</h3>
+                      <span class="cat-subtitle">Filters, fuses, seals, O-rings, valves, lubricants</span>
+                    </div>
+                  </div>
+                  <div class="cat-header-meta">
+                    <span class="cat-qty-badge">1,120 items</span>
+                    <i data-lucide="chevron-down" class="cat-expand-icon"></i>
+                  </div>
+                </div>
+                <div class="cat-card-body">
+                  <p class="cat-desc">Routine wearable parts, air intake filters, hydraulic seals, and electrical fuses for lab test rigs.</p>
+                  <div class="cat-mini-stats">
+                    <span class="mini-stat"><strong>22</strong> SKUs</span>
+                    <span class="mini-stat text-warning"><strong>4</strong> Low Stock</span>
+                    <span class="mini-stat text-success"><strong>0</strong> Expired</span>
+                  </div>
+                  <div class="cat-action-toolbar">
+                    <button class="btn btn-success-sm action-btn-add" data-category="Equipment Consumables"><i data-lucide="plus"></i> Add Stock</button>
+                    <button class="btn btn-danger-sm action-btn-remove" data-category="Equipment Consumables"><i data-lucide="minus"></i> Remove Stock</button>
+                    <button class="btn btn-info-sm action-btn-stock" data-category="Equipment Consumables"><i data-lucide="bar-chart-2"></i> Stock Page</button>
+                    <button class="btn btn-warning-sm action-btn-register" data-category="Equipment Consumables"><i data-lucide="file-plus"></i> Register Consumable</button>
+                    <button class="btn btn-secondary-sm action-btn-reports" data-category="Equipment Consumables"><i data-lucide="file-text"></i> Reports</button>
+                    <button class="btn btn-primary-sm action-btn-list" data-category="Equipment Consumables"><i data-lucide="list"></i> Inventory List</button>
+                    <button class="btn btn-outline-sm action-btn-collapse"><i data-lucide="chevron-up"></i> Collapse</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 4. Equipment Spares Category Module -->
+              <div class="cat-accordion-card" data-category="Equipment Spares">
+                <div class="cat-card-header">
+                  <div class="cat-header-info">
+                    <div class="cat-icon icon-spares"><i data-lucide="settings"></i></div>
+                    <div>
+                      <h3 class="cat-title">Equipment Spares</h3>
+                      <span class="cat-subtitle">Crankshafts, motors, sensors, pumps, bearings</span>
+                    </div>
+                  </div>
+                  <div class="cat-header-meta">
+                    <span class="cat-qty-badge">674 pcs</span>
+                    <i data-lucide="chevron-down" class="cat-expand-icon"></i>
+                  </div>
+                </div>
+                <div class="cat-card-body">
+                  <p class="cat-desc">Critical machinery spares, replacement motors, precision sensors, and heavy equipment sub-assemblies.</p>
+                  <div class="cat-mini-stats">
+                    <span class="mini-stat"><strong>18</strong> SKUs</span>
+                    <span class="mini-stat text-warning"><strong>3</strong> Low Stock</span>
+                    <span class="mini-stat text-success"><strong>0</strong> Expired</span>
+                  </div>
+                  <div class="cat-action-toolbar">
+                    <button class="btn btn-success-sm action-btn-add" data-category="Equipment Spares"><i data-lucide="plus"></i> Add Stock</button>
+                    <button class="btn btn-danger-sm action-btn-remove" data-category="Equipment Spares"><i data-lucide="minus"></i> Remove Stock</button>
+                    <button class="btn btn-info-sm action-btn-stock" data-category="Equipment Spares"><i data-lucide="bar-chart-2"></i> Stock Page</button>
+                    <button class="btn btn-warning-sm action-btn-register" data-category="Equipment Spares"><i data-lucide="file-plus"></i> Register Spare</button>
+                    <button class="btn btn-secondary-sm action-btn-reports" data-category="Equipment Spares"><i data-lucide="file-text"></i> Reports</button>
+                    <button class="btn btn-primary-sm action-btn-list" data-category="Equipment Spares"><i data-lucide="list"></i> Inventory List</button>
+                    <button class="btn btn-outline-sm action-btn-collapse"><i data-lucide="chevron-up"></i> Collapse</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 5. Gases Category Module -->
+              <div class="cat-accordion-card" data-category="Gases">
+                <div class="cat-card-header">
+                  <div class="cat-header-info">
+                    <div class="cat-icon icon-gases"><i data-lucide="wind"></i></div>
+                    <div>
+                      <h3 class="cat-title">Gases</h3>
+                      <span class="cat-subtitle">Nitrogen, Argon, Acetylene, Helium, Oxygen Cylinders</span>
+                    </div>
+                  </div>
+                  <div class="cat-header-meta">
+                    <span class="cat-qty-badge">125 cyl</span>
+                    <i data-lucide="chevron-down" class="cat-expand-icon"></i>
+                  </div>
+                </div>
+                <div class="cat-card-body">
+                  <p class="cat-desc">Compressed gas cylinders, carrier gases for chromatographs, shielding gases for welding testing.</p>
+                  <div class="cat-mini-stats">
+                    <span class="mini-stat"><strong>6</strong> SKUs</span>
+                    <span class="mini-stat text-warning"><strong>2</strong> Low Stock</span>
+                    <span class="mini-stat text-danger"><strong>1</strong> Expired</span>
+                  </div>
+                  <div class="cat-action-toolbar">
+                    <button class="btn btn-success-sm action-btn-add" data-category="Gases"><i data-lucide="plus"></i> Add Stock</button>
+                    <button class="btn btn-danger-sm action-btn-remove" data-category="Gases"><i data-lucide="minus"></i> Remove Stock</button>
+                    <button class="btn btn-info-sm action-btn-stock" data-category="Gases"><i data-lucide="bar-chart-2"></i> Stock Page</button>
+                    <button class="btn btn-warning-sm action-btn-register" data-category="Gases"><i data-lucide="file-plus"></i> Register Gas</button>
+                    <button class="btn btn-secondary-sm action-btn-reports" data-category="Gases"><i data-lucide="file-text"></i> Reports</button>
+                    <button class="btn btn-primary-sm action-btn-list" data-category="Gases"><i data-lucide="list"></i> Inventory List</button>
+                    <button class="btn btn-outline-sm action-btn-collapse"><i data-lucide="chevron-up"></i> Collapse</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 6. Tools Category Module -->
+              <div class="cat-accordion-card" data-category="Tools">
+                <div class="cat-card-header">
+                  <div class="cat-header-info">
+                    <div class="cat-icon icon-tools"><i data-lucide="wrench"></i></div>
+                    <div>
+                      <h3 class="cat-title">Tools</h3>
+                      <span class="cat-subtitle">Torque wrenches, digital calipers, micrometers, inspection jigs</span>
+                    </div>
+                  </div>
+                  <div class="cat-header-meta">
+                    <span class="cat-qty-badge">1,214 pcs</span>
+                    <i data-lucide="chevron-down" class="cat-expand-icon"></i>
+                  </div>
+                </div>
+                <div class="cat-card-body">
+                  <p class="cat-desc">Precision measuring instruments, hand tools, digital torque drivers, and quality audit gauges.</p>
+                  <div class="cat-mini-stats">
+                    <span class="mini-stat"><strong>16</strong> SKUs</span>
+                    <span class="mini-stat text-warning"><strong>2</strong> Low Stock</span>
+                    <span class="mini-stat text-success"><strong>0</strong> Expired</span>
+                  </div>
+                  <div class="cat-action-toolbar">
+                    <button class="btn btn-success-sm action-btn-add" data-category="Tools"><i data-lucide="plus"></i> Add Stock</button>
+                    <button class="btn btn-danger-sm action-btn-remove" data-category="Tools"><i data-lucide="minus"></i> Remove Stock</button>
+                    <button class="btn btn-info-sm action-btn-stock" data-category="Tools"><i data-lucide="bar-chart-2"></i> Stock Page</button>
+                    <button class="btn btn-warning-sm action-btn-register" data-category="Tools"><i data-lucide="file-plus"></i> Register Tool</button>
+                    <button class="btn btn-secondary-sm action-btn-reports" data-category="Tools"><i data-lucide="file-text"></i> Reports</button>
+                    <button class="btn btn-primary-sm action-btn-list" data-category="Tools"><i data-lucide="list"></i> Inventory List</button>
+                    <button class="btn btn-outline-sm action-btn-collapse"><i data-lucide="chevron-up"></i> Collapse</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- ===================================================================
+               INTERACTIVE CHARTS SECTION (8 HIGH-FIDELITY CHARTS)
+               =================================================================== -->
+          <section class="charts-section">
+            <div class="section-header">
+              <h2>Analytics & Interactive Dashboard Graphs</h2>
+              <p>Real-time telemetry and distribution metrics automatically synced with database state.</p>
+            </div>
+            
+            <!-- Row 1: Category Distribution & Status Breakdown -->
+            <div class="charts-row">
+              <div class="chart-card">
+                <div class="chart-header">
+                  <h3>Category Distribution</h3>
+                  <p>Breakdown of total inventory items across 6 core categories</p>
+                </div>
+                <div class="chart-wrapper">
+                  <canvas id="chart-category"></canvas>
+                </div>
+              </div>
+
+              <div class="chart-card">
+                <div class="chart-header">
+                  <h3>Inventory Health Status</h3>
+                  <p>In Stock vs Low Stock vs Expired vs Out of Stock per category</p>
+                </div>
+                <div class="chart-wrapper">
+                  <canvas id="chart-status"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 2: Monthly Transactions & Vendor Analysis -->
+            <div class="charts-row">
+              <div class="chart-card">
+                <div class="chart-header">
+                  <h3>Monthly Transactions (Inflow vs Outflow)</h3>
+                  <p>Volume of material additions and issue requisitions over 6 months</p>
+                </div>
+                <div class="chart-wrapper">
+                  <canvas id="chart-transactions"></canvas>
+                </div>
+              </div>
+
+              <div class="chart-card">
+                <div class="chart-header">
+                  <h3>Vendor Supply & Performance Share</h3>
+                  <p>Share of total inventory units provided by top suppliers</p>
+                </div>
+                <div class="chart-wrapper">
+                  <canvas id="chart-vendors"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 3: Department Analysis & Expiry Analysis -->
+            <div class="charts-row">
+              <div class="chart-card">
+                <div class="chart-header">
+                  <h3>Department Stock Allocation</h3>
+                  <p>Active items checked out and consumed by plant departments</p>
+                </div>
+                <div class="chart-wrapper">
+                  <canvas id="chart-departments"></canvas>
+                </div>
+              </div>
+
+              <div class="chart-card">
+                <div class="chart-header">
+                  <h3>Material Expiry Profile</h3>
+                  <p>Batches expiring within current quarters of 2026/2027</p>
+                </div>
+                <div class="chart-wrapper">
+                  <canvas id="chart-expiry"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 4: Low Stock & Inventory Trends -->
+            <div class="charts-row">
+              <div class="chart-card">
+                <div class="chart-header">
+                  <h3>Low Stock & Reorder Analysis</h3>
+                  <p>Items near or below minimum safety threshold</p>
+                </div>
+                <div class="chart-wrapper">
+                  <canvas id="chart-lowstock"></canvas>
+                </div>
+              </div>
+
+              <div class="chart-card">
+                <div class="chart-header">
+                  <h3>Stock Movement Trends</h3>
+                  <p>Aggregated daily material consumption trajectory</p>
+                </div>
+                <div class="chart-wrapper">
+                  <canvas id="chart-trends"></canvas>
+                </div>
+              </div>
+            </div>
+
+          </section>
+
+          <!-- ===================================================================
+               FEATURED INVENTORY CARDS SECTION
+               =================================================================== -->
+          <section class="inventory-section">
+            <div class="section-header">
+              <h2>Featured Inventory Highlights</h2>
+              <p>Key warehouse lot tracking, storage locations, and compliance states</p>
+            </div>
+            <div class="inventory-grid" id="dashboard-featured-cards-grid">
+              <!-- Dynamically populated via JS -->
+            </div>
+          </section>
+
+          <!-- ===================================================================
+               RECENT ACTIVITY LOG TABLE
+               =================================================================== -->
+          <section class="activities-section">
+            <div class="section-header">
+              <h2>Recent Activity Log</h2>
+              <p>Real-time audit log of stock movements, registrations, and calibration alerts</p>
+            </div>
+            <div class="table-container">
+              <table class="activities-table">
+                <thead>
+                  <tr>
+                    <th>Time</th>
+                    <th>Item / Payload</th>
+                    <th>Action Type</th>
+                    <th>User</th>
+                    <th>Department</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="dashboard-activity-log-tbody">
+                  <!-- Dynamically populated via JS -->
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+        </div> <!-- /#dashboard-view -->
+
+        <!-- ===================================================================
+             ANALYTICS SUITE VIEW
+             =================================================================== -->
+        <div id="analytics-view" class="workspace-view">
+          <div class="view-header">
+            <div>
+              <h1>Enterprise Analytics &amp; Intelligence Suite</h1>
+              <p>Comprehensive telemetry, inventory distribution metrics, stock flow trajectories, and compliance insights.</p>
+            </div>
+            <div class="view-actions">
+              <button class="btn btn-primary-sm" onclick="window.print()"><i data-lucide="printer"></i> Print Analytics Report</button>
+            </div>
+          </div>
+
+          <!-- Summary Stat Cards -->
+          <div class="stats-grid margin-bottom-lg">
+            <div class="stat-card">
+              <div class="card-icon icon-blue"><i data-lucide="layers"></i></div>
+              <div class="card-content">
+                <span class="card-label">Total SKUs Tracked</span>
+                <span class="card-number" id="analytics-total-skus">12</span>
+                <span class="desc">Active database records</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="card-icon icon-amber"><i data-lucide="alert-circle"></i></div>
+              <div class="card-content">
+                <span class="card-label">Low Stock Alerts</span>
+                <span class="card-number" id="analytics-low-skus">3</span>
+                <span class="desc">Safety threshold breaches</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="card-icon icon-green"><i data-lucide="package-check"></i></div>
+              <div class="card-content">
+                <span class="card-label">Total Material Volume</span>
+                <span class="card-number" id="analytics-total-units">575</span>
+                <span class="desc">Physical units in storage</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="card-icon icon-red"><i data-lucide="calendar-x"></i></div>
+              <div class="card-content">
+                <span class="card-label">Quarantined / Expired</span>
+                <span class="card-number" id="analytics-expired-skus">1</span>
+                <span class="desc">Action required</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Analytics Charts Grid -->
+          <section class="charts-section">
+            <div class="charts-row">
+              <div class="chart-card">
+                <div class="chart-header">
+                  <h3>Category Distribution Analytics</h3>
+                  <p>Volume distribution across 6 material categories</p>
+                </div>
+                <div class="chart-wrapper">
+                  <canvas id="analytics-chart-category"></canvas>
+                </div>
+              </div>
+
+              <div class="chart-card">
+                <div class="chart-header">
+                  <h3>Inventory Health &amp; Compliance</h3>
+                  <p>In Stock vs Low Stock vs Expired across categories</p>
+                </div>
+                <div class="chart-wrapper">
+                  <canvas id="analytics-chart-status"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <div class="charts-row">
+              <div class="chart-card">
+                <div class="chart-header">
+                  <h3>Monthly Material Inflow &amp; Outflow</h3>
+                  <p>Historical stock movements breakdown</p>
+                </div>
+                <div class="chart-wrapper">
+                  <canvas id="analytics-chart-transactions"></canvas>
+                </div>
+              </div>
+
+              <div class="chart-card">
+                <div class="chart-header">
+                  <h3>Vendor Rating Profile</h3>
+                  <p>Quality and fulfillment scores of top suppliers</p>
+                </div>
+                <div class="chart-wrapper">
+                  <canvas id="analytics-chart-vendors"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <div class="charts-row">
+              <div class="chart-card">
+                <div class="chart-header">
+                  <h3>Department Material Allocation</h3>
+                  <p>Units allocated to plant manufacturing lines</p>
+                </div>
+                <div class="chart-wrapper">
+                  <canvas id="analytics-chart-departments"></canvas>
+                </div>
+              </div>
+
+              <div class="chart-card">
+                <div class="chart-header">
+                  <h3>Material Expiry Profile</h3>
+                  <p>Expiration windows</p>
+                </div>
+                <div class="chart-wrapper">
+                  <canvas id="analytics-chart-expiry"></canvas>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div> <!-- /#analytics-view -->
+
+        <!-- ===================================================================
+             VIEW 2: MASTER INVENTORY CATALOG VIEW
+             =================================================================== -->
+        <div id="inventory-view" class="workspace-view">
+          <div class="view-header">
+            <div>
+              <h1>Master Inventory Catalog</h1>
+              <p>Search, filter, and manage every chemical, CRM, consumable, spare, gas cylinder, and tool in the plant.</p>
+            </div>
+            <div class="view-actions">
+              <button class="btn btn-outline-sm open-qr-scanner-btn"><i data-lucide="qr-code"></i> Scan QR Code</button>
+              <button class="btn btn-warning open-register-modal-btn"><i data-lucide="plus"></i> Register New Item</button>
+              <button class="btn btn-primary open-add-stock-btn"><i data-lucide="plus-circle"></i> Add Stock</button>
+              <button class="btn btn-danger open-remove-stock-btn"><i data-lucide="minus-circle"></i> Remove Stock</button>
+            </div>
+          </div>
+
+          <!-- Search & Filter Control Bar -->
+          <div class="filter-control-bar">
+            <div class="filter-search-box">
+              <i data-lucide="search"></i>
+              <input type="text" id="catalog-search-input" placeholder="Search by Item Name, SKU, QR Code, Vendor, Location...">
+            </div>
+            <div class="filter-select-group">
+              <select id="filter-category-select">
+                <option value="ALL">All Categories</option>
+                <option value="Chemicals">Chemicals</option>
+                <option value="CRMs">CRMs</option>
+                <option value="Equipment Consumables">Equipment Consumables</option>
+                <option value="Equipment Spares">Equipment Spares</option>
+                <option value="Gases">Gases</option>
+                <option value="Tools">Tools</option>
+              </select>
+              <select id="filter-status-select">
+                <option value="ALL">All Statuses</option>
+                <option value="In Stock">In Stock</option>
+                <option value="Low Stock">Low Stock</option>
+                <option value="Expired">Expired</option>
+                <option value="Out of Stock">Out of Stock</option>
+              </select>
+              <select id="filter-department-select">
+                <option value="ALL">All Departments</option>
+                <option value="Quality Assurance">Quality Assurance</option>
+                <option value="Paint Shop">Paint Shop</option>
+                <option value="Assembly Line 1">Assembly Line 1</option>
+                <option value="Assembly Line 2">Assembly Line 2</option>
+                <option value="Engine Shop">Engine Shop</option>
+                <option value="R&D">R&D</option>
+              </select>
+              <select id="sort-catalog-select">
+                <option value="name-asc">Sort: Name (A-Z)</option>
+                <option value="stock-desc">Sort: Stock Qty (High to Low)</option>
+                <option value="expiry-asc">Sort: Expiry (Nearest First)</option>
+              </select>
+              <div class="view-mode-toggle">
+                <button class="icon-btn active" id="view-mode-cards" title="Cards View"><i data-lucide="grid"></i></button>
+                <button class="icon-btn" id="view-mode-table" title="Table View"><i data-lucide="list"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cards View Grid Container -->
+          <div class="inventory-grid" id="catalog-cards-container">
+            <!-- Rendered by app.js -->
+          </div>
+
+          <!-- Table View Container (Hidden by default) -->
+          <div class="table-container hidden" id="catalog-table-container">
+            <table class="activities-table">
+              <thead>
+                <tr>
+                  <th>SKU / ID</th>
+                  <th>Item Name</th>
+                  <th>Category</th>
+                  <th>Stock Qty</th>
+                  <th>Storage Location</th>
+                  <th>Vendor</th>
+                  <th>Expiry Date</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="catalog-tbody">
+                <!-- Rendered by app.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ===================================================================
+             CATEGORY VIEWS: 6 DYNAMIC CATEGORY-SPECIFIC VIEWS (Reusable Template)
+             =================================================================== -->
+
+        <!-- CHEMICALS VIEW -->
+        <div id="chemicals-view" class="workspace-view catview catview-chemicals">
+          <div class="catview-header">
+            <div class="catview-header-left">
+              <div class="catview-icon-wrap catview-icon-blue"><i data-lucide="flask-conical"></i></div>
+              <div>
+                <h1 class="catview-title">Chemicals Inventory</h1>
+                <p class="catview-sub">Register items, adjust stock levels, print barcodes, and download logs.</p>
+              </div>
+            </div>
+            <div class="catview-header-actions">
+              <button class="btn btn-outline-sm open-add-stock-btn"><i data-lucide="plus-circle"></i> Add Stock</button>
+              <button class="btn btn-danger open-remove-stock-btn"><i data-lucide="minus-circle"></i> Remove Stock</button>
+              <button class="btn btn-warning open-register-modal-btn" data-category="Chemicals"><i data-lucide="plus"></i> + Register New Chemical</button>
+            </div>
+          </div>
+          <div class="catview-filter-bar">
+            <div class="catview-search"><i data-lucide="search"></i><input type="text" id="chem-search" placeholder="Search by Item Name, ID, Location, Vendor..."></div>
+            <select id="chem-sub-filter"><option value="">All Subcategories</option><option>Solvents</option><option>Reagents</option><option>Paints & Thinners</option><option>Acids & Bases</option><option>Lubricants</option></select>
+            <select id="chem-status-filter"><option value="">All Status</option><option>In Stock</option><option>Low Stock</option><option>Out of Stock</option><option>Expired</option></select>
+            <button class="btn btn-outline-sm" onclick="exportCategoryCSV('Chemicals')"><i data-lucide="download"></i> Export</button>
+          </div>
+          <div class="catview-table-wrap">
+            <table class="catview-table">
+              <thead><tr><th>IMAGE</th><th>ITEM ID</th><th>ITEM NAME</th><th>UOM / SIZE</th><th>STORAGE LOCATION</th><th>AVAILABLE QTY</th><th>EXPIRY</th><th>STATUS</th><th>ACTIONS</th></tr></thead>
+              <tbody id="catview-tbody-chemicals"><!-- Rendered by app.js --></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- CRMs STANDARDS VIEW -->
+        <div id="crms-view" class="workspace-view catview catview-crms">
+          <div class="catview-header">
+            <div class="catview-header-left">
+              <div class="catview-icon-wrap catview-icon-teal"><i data-lucide="book-open"></i></div>
+              <div>
+                <h1 class="catview-title">CRMs Standards Inventory</h1>
+                <p class="catview-sub">Register items, adjust stock levels, print barcodes, and download logs.</p>
+              </div>
+            </div>
+            <div class="catview-header-actions">
+              <button class="btn btn-outline-sm open-add-stock-btn"><i data-lucide="plus-circle"></i> Add Stock</button>
+              <button class="btn btn-danger open-remove-stock-btn"><i data-lucide="minus-circle"></i> Remove Stock</button>
+              <button class="btn btn-warning open-register-modal-btn" data-category="CRMs"><i data-lucide="plus"></i> + Register New CRM Standard</button>
+            </div>
+          </div>
+          <div class="catview-filter-bar">
+            <div class="catview-search"><i data-lucide="search"></i><input type="text" id="crms-search" placeholder="Search by Item Name, ID, Lot No., Standard..."></div>
+            <select id="crms-sub-filter"><option value="">All Subcategories</option><option>Certified Reference Materials</option><option>Calibration Standards</option><option>Trace Standards</option></select>
+            <select id="crms-status-filter"><option value="">All Status</option><option>In Stock</option><option>Low Stock</option><option>Out of Stock</option><option>Expired</option></select>
+            <button class="btn btn-outline-sm" onclick="exportCategoryCSV('CRMs')"><i data-lucide="download"></i> Export</button>
+          </div>
+          <div class="catview-table-wrap">
+            <table class="catview-table">
+              <thead><tr><th>IMAGE</th><th>ITEM ID</th><th>ITEM NAME</th><th>UOM / SIZE</th><th>STORAGE LOCATION</th><th>AVAILABLE QTY</th><th>EXPIRY</th><th>STATUS</th><th>ACTIONS</th></tr></thead>
+              <tbody id="catview-tbody-crms"><!-- Rendered by app.js --></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- EQUIPMENT CONSUMABLES VIEW -->
+        <div id="consumables-view" class="workspace-view catview catview-consumables">
+          <div class="catview-header">
+            <div class="catview-header-left">
+              <div class="catview-icon-wrap catview-icon-purple"><i data-lucide="settings-2"></i></div>
+              <div>
+                <h1 class="catview-title">Equip. Consumables Inventory</h1>
+                <p class="catview-sub">Register items, adjust stock levels, print barcodes, and download logs.</p>
+              </div>
+            </div>
+            <div class="catview-header-actions">
+              <button class="btn btn-outline-sm open-add-stock-btn"><i data-lucide="plus-circle"></i> Add Stock</button>
+              <button class="btn btn-danger open-remove-stock-btn"><i data-lucide="minus-circle"></i> Remove Stock</button>
+              <button class="btn btn-warning open-register-modal-btn" data-category="Equipment Consumables"><i data-lucide="plus"></i> + Register New Consumable</button>
+            </div>
+          </div>
+          <div class="catview-filter-bar">
+            <div class="catview-search"><i data-lucide="search"></i><input type="text" id="cons-search" placeholder="Search by Item Name, ID, Batch No., Location..."></div>
+            <select id="cons-sub-filter"><option value="">All Subcategories</option><option>Batteries & Cells</option><option>Welding Consumables</option><option>Abrasives</option><option>Filters</option></select>
+            <select id="cons-status-filter"><option value="">All Status</option><option>In Stock</option><option>Low Stock</option><option>Out of Stock</option><option>Expired</option></select>
+            <button class="btn btn-outline-sm" onclick="exportCategoryCSV('Equipment Consumables')"><i data-lucide="download"></i> Export</button>
+          </div>
+          <div class="catview-table-wrap">
+            <table class="catview-table">
+              <thead><tr><th>IMAGE</th><th>ITEM ID</th><th>ITEM NAME</th><th>UOM / SIZE</th><th>STORAGE LOCATION</th><th>AVAILABLE QTY</th><th>EXPIRY</th><th>STATUS</th><th>ACTIONS</th></tr></thead>
+              <tbody id="catview-tbody-consumables"><!-- Rendered by app.js --></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- EQUIPMENT SPARES VIEW -->
+        <div id="spares-view" class="workspace-view catview catview-spares">
+          <div class="catview-header">
+            <div class="catview-header-left">
+              <div class="catview-icon-wrap catview-icon-orange"><i data-lucide="cpu"></i></div>
+              <div>
+                <h1 class="catview-title">Equip. Spares Inventory</h1>
+                <p class="catview-sub">Register items, adjust stock levels, print barcodes, and download logs.</p>
+              </div>
+            </div>
+            <div class="catview-header-actions">
+              <button class="btn btn-outline-sm open-add-stock-btn"><i data-lucide="plus-circle"></i> Add Stock</button>
+              <button class="btn btn-danger open-remove-stock-btn"><i data-lucide="minus-circle"></i> Remove Stock</button>
+              <button class="btn btn-warning open-register-modal-btn" data-category="Equipment Spares"><i data-lucide="plus"></i> + Register New Spare Part</button>
+            </div>
+          </div>
+          <div class="catview-filter-bar">
+            <div class="catview-search"><i data-lucide="search"></i><input type="text" id="spares-search" placeholder="Search by Part Name, ID, Engine, Model..."></div>
+            <select id="spares-sub-filter"><option value="">All Subcategories</option><option>Engine Parts</option><option>Motors & Drives</option><option>Bearings & Seals</option><option>Hydraulics</option></select>
+            <select id="spares-status-filter"><option value="">All Status</option><option>In Stock</option><option>Low Stock</option><option>Out of Stock</option></select>
+            <button class="btn btn-outline-sm" onclick="exportCategoryCSV('Equipment Spares')"><i data-lucide="download"></i> Export</button>
+          </div>
+          <div class="catview-table-wrap">
+            <table class="catview-table">
+              <thead><tr><th>IMAGE</th><th>ITEM ID</th><th>ITEM NAME</th><th>UOM / SIZE</th><th>STORAGE LOCATION</th><th>AVAILABLE QTY</th><th>EXPIRY</th><th>STATUS</th><th>ACTIONS</th></tr></thead>
+              <tbody id="catview-tbody-spares"><!-- Rendered by app.js --></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- GASES CYLINDERS VIEW -->
+        <div id="gases-view" class="workspace-view catview catview-gases">
+          <div class="catview-header">
+            <div class="catview-header-left">
+              <div class="catview-icon-wrap catview-icon-cyan"><i data-lucide="wind"></i></div>
+              <div>
+                <h1 class="catview-title">Gases Cylinders Inventory</h1>
+                <p class="catview-sub">Register items, adjust stock levels, print barcodes, and download logs.</p>
+              </div>
+            </div>
+            <div class="catview-header-actions">
+              <button class="btn btn-outline-sm open-add-stock-btn"><i data-lucide="plus-circle"></i> Add Stock</button>
+              <button class="btn btn-danger open-remove-stock-btn"><i data-lucide="minus-circle"></i> Remove Stock</button>
+              <button class="btn btn-warning open-register-modal-btn" data-category="Gases"><i data-lucide="plus"></i> + Register New Gas Cylinder</button>
+            </div>
+          </div>
+          <div class="catview-filter-bar">
+            <div class="catview-search"><i data-lucide="search"></i><input type="text" id="gases-search" placeholder="Search by Gas Name, Cylinder ID, Supplier..."></div>
+            <select id="gases-sub-filter"><option value="">All Subcategories</option><option>Inert Gases</option><option>Fuel Gases</option><option>Calibration Gases</option><option>Cryogenic</option></select>
+            <select id="gases-status-filter"><option value="">All Status</option><option>In Stock</option><option>Low Stock</option><option>Out of Stock</option></select>
+            <button class="btn btn-outline-sm" onclick="exportCategoryCSV('Gases')"><i data-lucide="download"></i> Export</button>
+          </div>
+          <div class="catview-table-wrap">
+            <table class="catview-table">
+              <thead><tr><th>IMAGE</th><th>ITEM ID</th><th>ITEM NAME</th><th>UOM / SIZE</th><th>STORAGE LOCATION</th><th>AVAILABLE QTY</th><th>EXPIRY</th><th>STATUS</th><th>ACTIONS</th></tr></thead>
+              <tbody id="catview-tbody-gases"><!-- Rendered by app.js --></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- TOOLS & INSTRUMENTS VIEW -->
+        <div id="tools-view" class="workspace-view catview catview-tools">
+          <div class="catview-header">
+            <div class="catview-header-left">
+              <div class="catview-icon-wrap catview-icon-rose"><i data-lucide="wrench"></i></div>
+              <div>
+                <h1 class="catview-title">Tools &amp; Instruments Inventory</h1>
+                <p class="catview-sub">Register items, adjust stock levels, print barcodes, and download logs.</p>
+              </div>
+            </div>
+            <div class="catview-header-actions">
+              <button class="btn btn-outline-sm open-add-stock-btn"><i data-lucide="plus-circle"></i> Add Stock</button>
+              <button class="btn btn-danger open-remove-stock-btn"><i data-lucide="minus-circle"></i> Remove Stock</button>
+              <button class="btn btn-warning open-register-modal-btn" data-category="Tools"><i data-lucide="plus"></i> + Register New Tool</button>
+            </div>
+          </div>
+          <div class="catview-filter-bar">
+            <div class="catview-search"><i data-lucide="search"></i><input type="text" id="tools-search" placeholder="Search by Tool Name, ID, Calibration Due..."></div>
+            <select id="tools-sub-filter"><option value="">All Subcategories</option><option>Torque Tools</option><option>Measuring Instruments</option><option>Hand Tools</option><option>Power Tools</option></select>
+            <select id="tools-status-filter"><option value="">All Status</option><option>In Stock</option><option>Low Stock</option><option>Out of Stock</option></select>
+            <button class="btn btn-outline-sm" onclick="exportCategoryCSV('Tools')"><i data-lucide="download"></i> Export</button>
+          </div>
+          <div class="catview-table-wrap">
+            <table class="catview-table">
+              <thead><tr><th>IMAGE</th><th>ITEM ID</th><th>ITEM NAME</th><th>UOM / SIZE</th><th>STORAGE LOCATION</th><th>AVAILABLE QTY</th><th>EXPIRY</th><th>STATUS</th><th>ACTIONS</th></tr></thead>
+              <tbody id="catview-tbody-tools"><!-- Rendered by app.js --></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ===================================================================
+             VIEW 3: STOCK MOVEMENTS & TRANSACTIONS VIEW
+             =================================================================== -->
+        <div id="transactions-view" class="workspace-view">
+          <div class="view-header">
+            <div>
+              <h1>Stock Movements & Requisitions</h1>
+              <p>Complete record of stock inflow (Add Stock) and stock outflow (Remove Stock / Issue Requisitions).</p>
+            </div>
+            <div class="view-actions">
+              <button class="btn btn-primary open-add-stock-btn"><i data-lucide="plus-circle"></i> + Add Stock (Inflow)</button>
+              <button class="btn btn-danger open-remove-stock-btn"><i data-lucide="minus-circle"></i> - Remove Stock (Outflow)</button>
+              <button class="btn btn-outline-sm" id="btn-export-transactions"><i data-lucide="download"></i> Export History</button>
+            </div>
+          </div>
+
+          <!-- Transaction Cards Summary -->
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="card-icon icon-green"><i data-lucide="arrow-down-left"></i></div>
+              <div class="card-content">
+                <span class="card-label">Total Stock Added (Month)</span>
+                <span class="card-number" id="tx-stat-in">1,450 <small>units</small></span>
+                <span class="desc">Inflow replenishments</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="card-icon icon-red"><i data-lucide="arrow-up-right"></i></div>
+              <div class="card-content">
+                <span class="card-label">Total Stock Issued (Month)</span>
+                <span class="card-number" id="tx-stat-out">892 <small>units</small></span>
+                <span class="desc">Outflow to departments</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="card-icon"><i data-lucide="git-pull-request"></i></div>
+              <div class="card-content">
+                <span class="card-label">Net Movement Balance</span>
+                <span class="card-number" id="tx-stat-net">+558 <small>units</small></span>
+                <span class="desc">Positive plant stock growth</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Transactions History Table -->
+          <div class="table-container margin-top-lg">
+            <table class="activities-table">
+              <thead>
+                <tr>
+                  <th>Tx ID</th>
+                  <th>Date & Time</th>
+                  <th>Item Name</th>
+                  <th>Movement Type</th>
+                  <th>Quantity</th>
+                  <th>Department / Vendor</th>
+                  <th>Issued To / By</th>
+                  <th>Approved By</th>
+                  <th>Remarks / PO Ref</th>
+                </tr>
+              </thead>
+              <tbody id="transactions-history-tbody">
+                <!-- Rendered by app.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ===================================================================
+             VIEW 4: QR CODE MANAGEMENT SUITE VIEW
+             =================================================================== -->
+        <div id="qr-suite-view" class="workspace-view">
+          <div class="view-header">
+            <div>
+              <h1>Enterprise QR Code Suite</h1>
+              <p>Generate high-resolution inventory labels, scan QR codes, or search items using barcode identifiers.</p>
+            </div>
+            <div class="view-actions">
+              <button class="btn btn-primary open-qr-scanner-btn"><i data-lucide="camera"></i> Launch Camera QR Scanner</button>
+            </div>
+          </div>
+
+          <div class="qr-suite-layout">
+            <!-- Left: QR Generator Card -->
+            <div class="card-box">
+              <h3><i data-lucide="qr-code"></i> Live QR Code Generator</h3>
+              <p class="text-muted">Select an inventory item or enter custom text payload to generate printable QR sticker labels.</p>
+              
+              <div class="form-group margin-top-md">
+                <label>SELECT INVENTORY ITEM</label>
+                <select id="qr-generator-item-select">
+                  <!-- Options injected via JS -->
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>CUSTOM ENCODED DATA</label>
+                <input type="text" id="qr-custom-input" placeholder="e.g. MSIL-CHEM-DEG-3091 | Lot: 9902 | B-12">
+              </div>
+
+              <div class="qr-preview-box margin-top-md" id="qr-suite-preview">
+                <!-- SVG QR Code rendered here -->
+              </div>
+
+              <div class="btn-group margin-top-md">
+                <button class="btn btn-primary" id="btn-print-qr-label"><i data-lucide="printer"></i> Print QR Label</button>
+                <button class="btn btn-secondary" id="btn-download-qr-label"><i data-lucide="download"></i> Download QR Image</button>
+              </div>
+            </div>
+
+            <!-- Right: QR Scanner & Lookup Card -->
+            <div class="card-box">
+              <h3><i data-lucide="scan"></i> Quick QR Code Lookup & Simulator</h3>
+              <p class="text-muted">Simulate a barcode scanner trigger or select a sample code to open item details immediately.</p>
+              
+              <div class="qr-scanner-sim-box margin-top-md">
+                <div class="scanner-frame">
+                  <div class="laser-line"></div>
+                  <i data-lucide="qr-code" class="scanner-icon"></i>
+                </div>
+                <p class="scanner-status">Scanner Ready. Point camera at barcode label or select sample below:</p>
+                
+                <div class="sample-qr-pills margin-top-sm" id="sample-qr-pills-container">
+                  <!-- Sample QR Pills injected by app.js -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===================================================================
+             VIEW 5: REPORTS ENGINE VIEW
+             =================================================================== -->
+        <div id="reports-view" class="workspace-view">
+          <div class="view-header">
+            <div>
+              <h1>Enterprise QA Reports & Analytics Engine</h1>
+              <p>Generate, filter, and export compliance reports for Maruti Suzuki QA division.</p>
+            </div>
+            <div class="view-actions">
+              <button class="btn btn-success-sm" id="btn-export-excel"><i data-lucide="file-spreadsheet"></i> Export Excel</button>
+              <button class="btn btn-info-sm" id="btn-export-csv"><i data-lucide="download"></i> Export CSV</button>
+              <button class="btn btn-secondary-sm" id="btn-export-pdf"><i data-lucide="file-pdf"></i> Download PDF</button>
+              <button class="btn btn-primary-sm" id="btn-print-report"><i data-lucide="printer"></i> Print Report</button>
+            </div>
+          </div>
+
+          <!-- Report Category Tabs -->
+          <div class="report-tabs-nav">
+            <button class="report-tab-btn active" data-report="master">Master Inventory Report</button>
+            <button class="report-tab-btn" data-report="lowstock">Low Stock Alerts Report</button>
+            <button class="report-tab-btn" data-report="expired">Expired & Expiry Report</button>
+            <button class="report-tab-btn" data-report="vendor">Vendor Delivery Report</button>
+            <button class="report-tab-btn" data-report="department">Department Usage Report</button>
+            <button class="report-tab-btn" data-report="category">Category Analytics Report</button>
+          </div>
+
+          <!-- Report Content Area -->
+          <div class="report-content-card">
+            <div class="report-header-info">
+              <div>
+                <h3 id="report-title-display">Master Inventory Report</h3>
+                <span class="text-muted" id="report-date-stamp">Generated: July 21, 2026 • MSIL QA Division</span>
+              </div>
+              <div class="report-summary-badges">
+                <span class="badge badge-info" id="report-total-count">Total Records: 24</span>
+              </div>
+            </div>
+
+            <div class="table-container margin-top-md">
+              <table class="activities-table">
+                <thead id="report-thead">
+                  <!-- Injected by app.js -->
+                </thead>
+                <tbody id="report-tbody">
+                  <!-- Injected by app.js -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===================================================================
+             VIEW 6: VENDOR REGISTRY VIEW
+             =================================================================== -->
+        <div id="vendors-view" class="workspace-view">
+          <div class="view-header">
+            <div>
+              <h1>Vendor Registry & Partner Management</h1>
+              <p>Directory of approved chemical suppliers, equipment manufacturers, and calibration partners.</p>
+            </div>
+            <div class="view-actions">
+              <button class="btn btn-primary" id="btn-open-add-vendor-modal"><i data-lucide="plus-circle"></i> + Register New Vendor</button>
+            </div>
+          </div>
+
+          <!-- Vendors Grid / Table -->
+          <div class="table-container margin-top-md">
+            <table class="activities-table">
+              <thead>
+                <tr>
+                  <th>LOGO / PHOTO</th>
+                  <th>VENDOR CODE</th>
+                  <th>COMPANY NAME</th>
+                  <th>CONTACT PERSON</th>
+                  <th>MOBILE &amp; EMAIL</th>
+                  <th>PLANT / OFFICE ADDRESS</th>
+                  <th>SUPPLIED CATEGORY</th>
+                  <th>RATING</th>
+                  <th>STATUS</th>
+                  <th>ACTIONS</th>
+                </tr>
+              </thead>
+              <tbody id="vendors-table-tbody">
+                <!-- Rendered by app.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ===================================================================
+             VIEW 7: DEPARTMENTS VIEW
+             =================================================================== -->
+        <div id="departments-view" class="workspace-view">
+          <div class="view-header">
+            <div>
+              <h1>Plant Departments & Allocation</h1>
+              <p>Track material consumption across Assembly Lines, Quality Assurance, Paint Shop, and R&D.</p>
+            </div>
+          </div>
+
+          <div class="dept-grid-layout" id="departments-cards-grid">
+            <!-- Rendered by app.js -->
+          </div>
+        </div>
+
+        <!-- ===================================================================
+             VIEW 8: EXPIRY & CALIBRATION VIEW
+             =================================================================== -->
+        <div id="expiry-view" class="workspace-view">
+          <div class="view-header">
+            <div>
+              <h1>Expiry & Calibration Compliance Tracker</h1>
+              <p>Monitor chemical expiration dates, CRM validity windows, and torque wrench calibration schedules.</p>
+            </div>
+          </div>
+
+          <div class="table-container">
+            <table class="activities-table">
+              <thead>
+                <tr>
+                  <th>SKU / ID</th>
+                  <th>Item Name</th>
+                  <th>Category</th>
+                  <th>Batch / Lot No</th>
+                  <th>Expiry / Calibration Date</th>
+                  <th>Days Remaining</th>
+                  <th>Storage Location</th>
+                  <th>Action Required</th>
+                </tr>
+              </thead>
+              <tbody id="expiry-compliance-tbody">
+                <!-- Rendered by app.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ===================================================================
+             VIEW 9: ADMIN CONSOLE & AUDIT LOGS VIEW
+             =================================================================== -->
+        <div id="admin-view" class="workspace-view">
+          <div class="view-header">
+            <div>
+              <h1>Admin Console & System Audit Logs</h1>
+              <p>Manage system users, access control roles, and inspect immutable enterprise audit trails.</p>
+            </div>
+            <div class="view-actions">
+              <button class="btn btn-primary" id="btn-open-add-user-modal"><i data-lucide="user-plus"></i> Add New User</button>
+            </div>
+          </div>
+
+          <!-- User Management Table -->
+          <div class="card-box margin-bottom-lg">
+            <h3>Registered Users & Roles</h3>
+            <div class="table-container margin-top-sm">
+              <table class="activities-table">
+                <thead>
+                  <tr>
+                    <th>User ID</th>
+                    <th>Name</th>
+                    <th>Email Address</th>
+                    <th>Role</th>
+                    <th>Department</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="admin-users-tbody">
+                  <!-- Rendered by app.js -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- System Audit Logs Table -->
+          <div class="card-box">
+            <h3>System Audit Logs</h3>
+            <div class="table-container margin-top-sm">
+              <table class="activities-table">
+                <thead>
+                  <tr>
+                    <th>Log ID</th>
+                    <th>Timestamp</th>
+                    <th>User</th>
+                    <th>Action</th>
+                    <th>Module</th>
+                    <th>IP / Terminal</th>
+                    <th>Details</th>
+                  </tr>
+                </thead>
+                <tbody id="admin-audit-tbody">
+                  <!-- Rendered by app.js -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===================================================================
+             VIEW 10: SYSTEM CONFIGURATIONS VIEW
+             =================================================================== -->
+        <div id="settings-view" class="workspace-view">
+          <div class="view-header">
+            <div>
+              <h1>System Configurations</h1>
+              <p>Configure database parameters, threshold limits, and backup preferences.</p>
+            </div>
+          </div>
+
+          <div class="card-box max-width-800">
+            <h3>MySQL Database & Storage Engine</h3>
+            <div class="form-grid margin-top-md">
+              <div class="form-group">
+                <label>DATABASE HOST</label>
+                <input type="text" value="localhost:3306" readonly>
+              </div>
+              <div class="form-group">
+                <label>DATABASE NAME</label>
+                <input type="text" value="msil_qa_inventory" readonly>
+              </div>
+              <div class="form-group">
+                <label>LOW STOCK THRESHOLD DEF</label>
+                <input type="number" value="15">
+              </div>
+              <div class="form-group">
+                <label>EXPIRY ALERT WINDOW (DAYS)</label>
+                <input type="number" value="30">
+              </div>
+            </div>
+            <button class="btn btn-primary margin-top-md" onclick="alert('Configuration parameters saved successfully!')">Save System Settings</button>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODALS & OVERLAYS SUITE
+       ========================================================================== -->
+
+  <!-- 1. CATEGORY ITEM REGISTRATION MODAL -->
+  <div id="register-item-modal" class="modal-overlay hidden">
+    <div class="modal-card modal-lg">
+      <div class="modal-header">
+        <div>
+          <h2 id="register-modal-title">Register New Inventory Item</h2>
+          <p class="text-muted">Fill in enterprise item specifications to insert record into MySQL database.</p>
+        </div>
+        <button class="close-modal-btn">&times;</button>
+      </div>
+
+      <!-- Registration Category Tabs -->
+      <div class="modal-tabs-nav" id="register-category-tabs">
+        <button class="modal-tab-btn active" data-cat="Chemicals">Register Chemical</button>
+        <button class="modal-tab-btn" data-cat="CRMs">Register CRM</button>
+        <button class="modal-tab-btn" data-cat="Equipment Consumables">Register Consumable</button>
+        <button class="modal-tab-btn" data-cat="Equipment Spares">Register Spare</button>
+        <button class="modal-tab-btn" data-cat="Gases">Register Gas</button>
+        <button class="modal-tab-btn" data-cat="Tools">Register Tool</button>
+      </div>
+
+      <form id="register-item-form">
+        <div class="modal-body form-grid">
+          
+          <div class="form-group">
+            <label>ITEM ID / SKU *</label>
+            <div class="input-with-btn">
+              <input type="text" id="reg-item-id" required placeholder="e.g. CHEM-DEG-9901">
+              <button type="button" class="btn btn-secondary-sm" id="btn-gen-item-id">Auto</button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>QR CODE DATA STRING</label>
+            <input type="text" id="reg-qr-code" placeholder="Generated automatically..." readonly>
+          </div>
+
+          <div class="form-group full-width">
+            <label>ITEM NAME *</label>
+            <input type="text" id="reg-item-name" required placeholder="e.g. High-Purity Acetone Solvent">
+          </div>
+
+          <div class="form-group full-width">
+            <label>DESCRIPTION</label>
+            <textarea id="reg-description" rows="2" placeholder="Item purpose, chemical safety notes, technical specs..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>CATEGORY *</label>
+            <input type="text" id="reg-category" readonly value="Chemicals">
+          </div>
+
+          <div class="form-group">
+            <label>SUB CATEGORY</label>
+            <input type="text" id="reg-subcategory" placeholder="e.g. Solvents / Reagents">
+          </div>
+
+          <div class="form-group">
+            <label>DEPARTMENT *</label>
+            <select id="reg-department" required>
+              <option value="Quality Assurance">Quality Assurance</option>
+              <option value="Paint Shop">Paint Shop</option>
+              <option value="Assembly Line 1">Assembly Line 1</option>
+              <option value="Assembly Line 2">Assembly Line 2</option>
+              <option value="Engine Shop">Engine Shop</option>
+              <option value="R&D">R&D</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>VENDOR / SUPPLIER *</label>
+            <select id="reg-vendor" required>
+              <!-- Populated by JS -->
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>STORAGE LOCATION *</label>
+            <input type="text" id="reg-location" required placeholder="e.g. Chem Vault 3, Aisle A, Shelf 2">
+          </div>
+
+          <div class="form-group">
+            <label>MANUFACTURER</label>
+            <input type="text" id="reg-manufacturer" placeholder="e.g. Merck KGaA / Sigma Aldrich">
+          </div>
+
+          <div class="form-group">
+            <label>PURCHASE ORDER (PO) NO</label>
+            <input type="text" id="reg-po-number" placeholder="e.g. PO-2026-88492">
+          </div>
+
+          <div class="form-group">
+            <label>EXPIRY DATE / CALIBRATION DUE</label>
+            <input type="date" id="reg-expiry-date">
+          </div>
+
+          <div class="form-group">
+            <label>BATCH / LOT NUMBER</label>
+            <input type="text" id="reg-batch-number" placeholder="e.g. LOT-2026-B99">
+          </div>
+
+          <div class="form-group">
+            <label>SIZE / PACKAGE SPEC</label>
+            <input type="text" id="reg-size" placeholder="e.g. 5 Liters Can / 500g Jar">
+          </div>
+
+          <div class="form-group">
+            <label>UNIT OF MEASURE *</label>
+            <select id="reg-unit" required>
+              <option value="Liters">Liters</option>
+              <option value="units">units</option>
+              <option value="pcs">pcs</option>
+              <option value="lots">lots</option>
+              <option value="cylinders">cylinders</option>
+              <option value="kg">kg</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>INITIAL STOCK QTY *</label>
+            <input type="number" id="reg-current-stock" required min="0" value="50">
+          </div>
+
+          <div class="form-group">
+            <label>MAX STOCK LEVEL</label>
+            <input type="number" id="reg-max-level" value="200">
+          </div>
+
+          <div class="form-group">
+            <label>MIN SAFETY LEVEL</label>
+            <input type="number" id="reg-min-level" value="20">
+          </div>
+
+          <div class="form-group">
+            <label>REORDER THRESHOLD</label>
+            <input type="number" id="reg-reorder-level" value="25">
+          </div>
+
+          <div class="form-group full-width">
+            <label>ITEM / CHEMICAL PHOTO</label>
+            <div class="image-upload-wrapper" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+              <input type="file" id="reg-item-image-file" accept="image/*" style="display: none;">
+              <button type="button" class="btn btn-secondary-sm" id="btn-browse-image"><i data-lucide="upload"></i> Upload Photo File</button>
+              <span class="text-muted" style="font-size: 0.8rem;">or enter Image URL:</span>
+              <input type="text" id="reg-item-image-url" placeholder="assets/items/degreaser-solvent.png or https://..." style="flex: 1; min-width: 200px;">
+              <div id="reg-image-preview-box" style="width: 44px; height: 44px; border-radius: 6px; border: 1px dashed #CBD5E1; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #F8FAFC;">
+                <i data-lucide="image" style="width: 20px; height: 20px; color: #94A3B8;"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group full-width">
+            <label>REMARKS / HAZARD NOTES</label>
+            <input type="text" id="reg-remarks" placeholder="Flammable Liquid - Store below 25°C">
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary close-modal-btn">Cancel</button>
+          <button type="reset" class="btn btn-outline-sm">Reset</button>
+          <button type="submit" class="btn btn-primary"><i data-lucide="check-circle"></i> Save Item to Inventory</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 2. ADD STOCK MODAL -->
+  <div id="add-stock-modal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <div class="modal-header header-success">
+        <div>
+          <h2><i data-lucide="plus-circle"></i> Add Stock (Inventory Inflow)</h2>
+          <p class="text-white-muted">Increase inventory quantity for received shipments and deliveries.</p>
+        </div>
+        <button class="close-modal-btn">&times;</button>
+      </div>
+
+      <form id="add-stock-form">
+        <div class="modal-body form-grid">
+          
+          <div class="form-group full-width">
+            <label>SELECT ITEM *</label>
+            <select id="add-stock-item-select" required>
+              <!-- Populated by JS -->
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>DATE</label>
+            <input type="date" id="add-stock-date" required>
+          </div>
+
+          <div class="form-group">
+            <label>TIME</label>
+            <input type="time" id="add-stock-time" required>
+          </div>
+
+          <div class="form-group">
+            <label>QUANTITY TO ADD *</label>
+            <input type="number" id="add-stock-quantity" required min="1" value="10">
+          </div>
+
+          <div class="form-group">
+            <label>STORAGE LOCATION</label>
+            <input type="text" id="add-stock-location" placeholder="Confirm Rack / Shelf">
+          </div>
+
+          <div class="form-group">
+            <label>VENDOR / SUPPLIER</label>
+            <input type="text" id="add-stock-vendor" placeholder="Supplier name">
+          </div>
+
+          <div class="form-group">
+            <label>BATCH / LOT NO</label>
+            <input type="text" id="add-stock-batch" placeholder="Lot ID">
+          </div>
+
+          <div class="form-group full-width">
+            <label>REMARKS / INVOICE PO REF</label>
+            <input type="text" id="add-stock-remarks" placeholder="e.g. Shipment delivered via PO-99201">
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary close-modal-btn">Cancel</button>
+          <button type="submit" class="btn btn-success"><i data-lucide="plus-circle"></i> Confirm Add Stock</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 3. REMOVE STOCK MODAL -->
+  <div id="remove-stock-modal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <div class="modal-header header-danger">
+        <div>
+          <h2><i data-lucide="minus-circle"></i> Remove Stock (Issue Material)</h2>
+          <p class="text-white-muted">Issue stock out for plant consumption, testing, or maintenance.</p>
+        </div>
+        <button class="close-modal-btn">&times;</button>
+      </div>
+
+      <form id="remove-stock-form">
+        <div class="modal-body form-grid">
+          
+          <div class="form-group full-width">
+            <label>SELECT ITEM *</label>
+            <select id="remove-stock-item-select" required>
+              <!-- Populated by JS -->
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>QUANTITY TO REMOVE *</label>
+            <input type="number" id="remove-stock-quantity" required min="1" value="1">
+          </div>
+
+          <div class="form-group">
+            <label>REQUESTING DEPARTMENT *</label>
+            <select id="remove-stock-department" required>
+              <option value="Quality Assurance">Quality Assurance</option>
+              <option value="Paint Shop">Paint Shop</option>
+              <option value="Assembly Line 1">Assembly Line 1</option>
+              <option value="Assembly Line 2">Assembly Line 2</option>
+              <option value="Engine Shop">Engine Shop</option>
+              <option value="R&D">R&D</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>USED BY / RECIPIENT NAME *</label>
+            <input type="text" id="remove-stock-user" required placeholder="e.g. Karan Sharma">
+          </div>
+
+          <div class="form-group">
+            <label>APPROVED BY (MANAGER ID) *</label>
+            <input type="text" id="remove-stock-approver" required value="MGR-VIKRAM-09">
+          </div>
+
+          <div class="form-group full-width">
+            <label>REASON FOR REMOVAL *</label>
+            <select id="remove-stock-reason" required>
+              <option value="Production Consumption">Production Consumption</option>
+              <option value="QA Test & Analysis">QA Test & Analysis</option>
+              <option value="Routine Maintenance">Routine Maintenance</option>
+              <option value="Expired Disposal">Expired Disposal</option>
+            </select>
+          </div>
+
+          <div class="form-group full-width">
+            <label>REMARKS</label>
+            <input type="text" id="remove-stock-remarks" placeholder="Work order or batch details...">
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary close-modal-btn">Cancel</button>
+          <button type="submit" class="btn btn-danger"><i data-lucide="minus-circle"></i> Confirm Issue Stock</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 4. STOCK DETAIL / HISTORY MODAL -->
+  <div id="stock-detail-modal" class="modal-overlay hidden">
+    <div class="modal-card modal-lg">
+      <div class="modal-header">
+        <div>
+          <h2 id="stock-detail-name">Item Stock Details & Audit History</h2>
+          <p class="text-muted" id="stock-detail-sku">SKU: ---</p>
+        </div>
+        <button class="close-modal-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        
+        <div class="detail-hero-grid">
+          <div class="detail-img-box">
+            <img id="stock-detail-img" src="" alt="Item">
+          </div>
+          <div class="detail-stats-box">
+            <div class="detail-stat">
+              <span class="detail-label">Current Stock</span>
+              <span class="detail-value text-primary" id="stock-detail-current">0</span>
+            </div>
+            <div class="detail-stat">
+              <span class="detail-label">Available Qty</span>
+              <span class="detail-value text-success" id="stock-detail-avail">0</span>
+            </div>
+            <div class="detail-stat">
+              <span class="detail-label">Reserved Qty</span>
+              <span class="detail-value text-warning" id="stock-detail-reserved">0</span>
+            </div>
+            <div class="detail-stat">
+              <span class="detail-label">Storage Location</span>
+              <span class="detail-val-sm" id="stock-detail-loc">---</span>
+            </div>
+            <div class="detail-stat">
+              <span class="detail-label">Expiry Date</span>
+              <span class="detail-val-sm" id="stock-detail-expiry">---</span>
+            </div>
+            <div class="detail-stat">
+              <span class="detail-label">Status</span>
+              <span id="stock-detail-status-badge">---</span>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="margin-top-lg">Stock Movement History</h3>
+        <div class="table-container margin-top-sm">
+          <table class="activities-table">
+            <thead>
+              <tr>
+                <th>Time</th>
+                <th>Action</th>
+                <th>Quantity</th>
+                <th>User / Dept</th>
+                <th>Remarks</th>
+              </tr>
+            </thead>
+            <tbody id="stock-detail-history-tbody">
+              <!-- Rendered by JS -->
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary close-modal-btn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. QR CODE SCANNER MODAL -->
+  <div id="qr-modal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <h2><i data-lucide="camera"></i> Barcode & QR Code Scanner</h2>
+          <p class="text-muted">Simulate live webcam scanning of inventory labels.</p>
+        </div>
+        <button class="close-modal-btn">&times;</button>
+      </div>
+      <div class="modal-body text-center">
+        <div class="camera-sim-viewport">
+          <div class="sim-scan-line"></div>
+          <i data-lucide="qr-code" class="sim-qr-bg-icon"></i>
+        </div>
+        <p class="margin-top-md text-muted">Scanning for barcode... Choose a sample item to scan:</p>
+        <div class="sim-scan-item-buttons margin-top-sm" id="sim-qr-buttons-container">
+          <!-- Injected by JS -->
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary close-modal-btn">Close Scanner</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. VENDOR REGISTRATION MODAL -->
+  <div id="vendor-modal" class="modal-overlay hidden">
+    <div class="modal-card modal-lg">
+      <div class="modal-header">
+        <div>
+          <h2>Register / Edit Vendor Partner</h2>
+          <p class="text-muted">Manage supplier credentials, contact details, mobile numbers, plant address, and photo logo.</p>
+        </div>
+        <button class="close-modal-btn">&times;</button>
+      </div>
+      <form id="vendor-registration-form">
+        <div class="modal-body form-grid">
+          <div class="form-group">
+            <label>VENDOR CODE *</label>
+            <input type="text" id="v-code" required placeholder="e.g. VEND-MERCK-01">
+          </div>
+          <div class="form-group">
+            <label>COMPANY / SUPPLIER NAME *</label>
+            <input type="text" id="v-name" required placeholder="e.g. Merck KGaA Speciality Chem">
+          </div>
+          <div class="form-group">
+            <label>CONTACT PERSON *</label>
+            <input type="text" id="v-contact" required placeholder="e.g. Dr. Rajesh Khanna">
+          </div>
+          <div class="form-group">
+            <label>EMAIL ADDRESS *</label>
+            <input type="email" id="v-email" required placeholder="orders@merck.com">
+          </div>
+          <div class="form-group">
+            <label>MOBILE / PHONE NUMBER *</label>
+            <input type="text" id="v-phone" required placeholder="+91 98100 12345">
+          </div>
+          <div class="form-group">
+            <label>SUPPLIED CATEGORY *</label>
+            <select id="v-category" required>
+              <option value="Chemicals">Chemicals</option>
+              <option value="CRMs">CRMs</option>
+              <option value="Equipment Consumables">Equipment Consumables</option>
+              <option value="Equipment Spares">Equipment Spares</option>
+              <option value="Gases">Gases</option>
+              <option value="Tools">Tools</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>QUALITY RATING</label>
+            <select id="v-rating">
+              <option value="5.0 ★">5.0 ★ (Outstanding)</option>
+              <option value="4.9 ★">4.9 ★ (Excellent)</option>
+              <option value="4.8 ★" selected>4.8 ★ (Approved)</option>
+              <option value="4.5 ★">4.5 ★ (Good)</option>
+              <option value="4.0 ★">4.0 ★ (Standard)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>APPROVAL STATUS</label>
+            <select id="v-status">
+              <option value="Approved">Approved</option>
+              <option value="Pending">Pending Audit</option>
+              <option value="On Hold">On Hold</option>
+            </select>
+          </div>
+
+          <div class="form-group full-width">
+            <label>OFFICE / PLANT ADDRESS *</label>
+            <textarea id="v-address" rows="2" required placeholder="Plot No., Industrial Area, City, State, Pincode..."></textarea>
+          </div>
+
+          <div class="form-group full-width">
+            <label>VENDOR LOGO / PHOTO</label>
+            <div class="image-upload-wrapper" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+              <input type="file" id="v-photo-file" accept="image/*" style="display: none;">
+              <button type="button" class="btn btn-secondary-sm" id="btn-browse-vendor-photo"><i data-lucide="upload"></i> Upload Logo File</button>
+              <span class="text-muted" style="font-size: 0.8rem;">or enter Image URL:</span>
+              <input type="text" id="v-photo-url" placeholder="assets/items/degreaser-solvent.png or https://..." style="flex: 1; min-width: 200px;">
+              <div id="v-photo-preview-box" style="width: 44px; height: 44px; border-radius: 6px; border: 1px dashed #CBD5E1; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #F8FAFC;">
+                <i data-lucide="building" style="width: 20px; height: 20px; color: #94A3B8;"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group full-width">
+            <label>CERTIFICATIONS &amp; NOTES</label>
+            <input type="text" id="v-notes" placeholder="ISO certification, contract ref, warranty terms...">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary close-modal-btn">Cancel</button>
+          <button type="submit" class="btn btn-primary"><i data-lucide="check-circle"></i> Save Vendor Record</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- VENDOR PROFILE / DETAIL MODAL -->
+  <div id="vendor-detail-modal" class="modal-overlay hidden">
+    <div class="modal-card modal-lg">
+      <div class="modal-header">
+        <div>
+          <h2 id="vd-name">Vendor Profile</h2>
+          <p class="text-muted" id="vd-code">Code: ---</p>
+        </div>
+        <button class="close-modal-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="detail-hero-grid">
+          <div class="detail-img-box">
+            <img id="vd-photo" src="" alt="Vendor Logo">
+          </div>
+          <div class="detail-stats-box">
+            <div class="detail-stat">
+              <span class="detail-label">Contact Person</span>
+              <span class="detail-value text-primary" id="vd-contact">---</span>
+            </div>
+            <div class="detail-stat">
+              <span class="detail-label">Mobile Number</span>
+              <span class="detail-val-sm font-bold" id="vd-phone">---</span>
+            </div>
+            <div class="detail-stat">
+              <span class="detail-label">Email Address</span>
+              <span class="detail-val-sm text-info" id="vd-email">---</span>
+            </div>
+            <div class="detail-stat">
+              <span class="detail-label">Supplied Category</span>
+              <span class="detail-val-sm" id="vd-category">---</span>
+            </div>
+            <div class="detail-stat">
+              <span class="detail-label">Quality Rating</span>
+              <span class="detail-val-sm text-warning font-bold" id="vd-rating">---</span>
+            </div>
+            <div class="detail-stat">
+              <span class="detail-label">Status</span>
+              <span id="vd-status-badge">---</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-box margin-top-md">
+          <h4>Office &amp; Plant Address</h4>
+          <p id="vd-address" class="text-main margin-top-xs font-bold">---</p>
+        </div>
+
+        <div class="card-box margin-top-sm">
+          <h4>Certifications &amp; Remarks</h4>
+          <p id="vd-notes" class="text-muted margin-top-xs">---</p>
+        </div>
+
+        <h3 class="margin-top-lg">Supplied Materials &amp; Products</h3>
+        <div class="table-container margin-top-sm">
+          <table class="activities-table">
+            <thead>
+              <tr>
+                <th>Item SKU</th>
+                <th>Item Name</th>
+                <th>Category</th>
+                <th>Stock Available</th>
+                <th>Storage Location</th>
+              </tr>
+            </thead>
+            <tbody id="vd-items-tbody">
+              <!-- Rendered by JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary close-modal-btn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. USER MODAL -->
+  <div id="user-modal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <h2>Add New System User</h2>
+          <p class="text-muted">Grant enterprise portal credentials to lab technician or manager.</p>
+        </div>
+        <button class="close-modal-btn">&times;</button>
+      </div>
+      <form id="user-registration-form">
+        <div class="modal-body form-grid">
+          <div class="form-group">
+            <label>USER ID *</label>
+            <input type="text" id="u-id" required placeholder="e.g. USR-QA-901">
+          </div>
+          <div class="form-group">
+            <label>FULL NAME *</label>
+            <input type="text" id="u-name" required placeholder="e.g. Anjali Mehta">
+          </div>
+          <div class="form-group">
+            <label>EMAIL ADDRESS *</label>
+            <input type="email" id="u-email" required placeholder="anjali@qa.com">
+          </div>
+          <div class="form-group">
+            <label>ROLE *</label>
+            <select id="u-role" required>
+              <option value="Operations Manager">Operations Manager</option>
+              <option value="QA Inspector">QA Inspector</option>
+              <option value="Lab Technician">Lab Technician</option>
+              <option value="Procurement Specialist">Procurement Specialist</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>DEPARTMENT *</label>
+            <select id="u-department" required>
+              <option value="Quality Assurance">Quality Assurance</option>
+              <option value="Paint Shop">Paint Shop</option>
+              <option value="Assembly Line 1">Assembly Line 1</option>
+              <option value="Assembly Line 2">Assembly Line 2</option>
+              <option value="Engine Shop">Engine Shop</option>
+              <option value="R&D">R&D</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary close-modal-btn">Cancel</button>
+          <button type="submit" class="btn btn-primary">Create User Account</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 8. PHOTO PREVIEW MODAL -->
+  <div id="photo-preview-modal" class="modal-overlay hidden" style="z-index: 9999; backdrop-filter: blur(5px);">
+    <div class="modal-card" style="max-width: 600px; text-align: center; background: transparent; box-shadow: none;">
+      <div style="position: relative; display: inline-block;">
+        <button class="close-modal-btn" style="position: absolute; top: -15px; right: -15px; background: #fff; border-radius: 50%; box-shadow: 0 2px 5px rgba(0,0,0,0.2); width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; z-index: 10;">&times;</button>
+        <img id="photo-preview-img" src="" alt="Preview" style="max-width: 100%; max-height: 80vh; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); border: 4px solid #fff;">
+      </div>
+    </div>
+  </div>
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Main Client Application Logic -->
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "msil-inventory-dashboard",
+  "version": "1.0.0",
+  "description": "Premium Enterprise Inventory Dashboard for Maruti Suzuki",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview",
+    "server": "node server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "sql.js": "^1.11.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
